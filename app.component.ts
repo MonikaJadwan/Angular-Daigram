@@ -294,6 +294,13 @@ export class AppComponent {
       iconCss: 'e-ddb-icons e-connector',
       title: 'Connectors',
     },
+    {
+      id: 'MyEquipment',
+      expanded: true,
+      symbols: this.connectorSymbols,
+      iconCss: 'e-ddb-icons e-connector',
+      title: 'Equipment',
+    },
   ];
 
   public contextMenu: ContextMenuSettingsModel = {
@@ -351,7 +358,8 @@ export class AppComponent {
     // console.log(diagram)
     // diagram = diagram.ej2_instances[0];
     this.dataSet = this.diagram.saveDiagram();
-    console.log(this.diagram.saveDiagram());
+    //console.log(this.dataSet);
+    console.log(JSON.parse(this.dataSet).nodes);
     //Initializes the saveDiagram API
     // var data = diagram.saveDiagram();
   }
